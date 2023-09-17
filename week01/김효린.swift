@@ -7,10 +7,10 @@ func solution(_ k:Int, _ m:Int, _ score:[Int]) -> Int {
     var maxProfit = 0
     var index = m - 1
     while index < scoreCount {
-        let minSelectScore = sortedScore[index]
+        let minSelectScore = sortedScore[index] * m
         maxProfit += minSelectScore
         index += m
     }
 
-    return maxProfit * m
+    return maxProfit
 }
